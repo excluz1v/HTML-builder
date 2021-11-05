@@ -21,7 +21,6 @@ async function createCssBundle(inputFolderPath, outputFolder) {
 
     //filter only css
     let cssFiles = onlyCssFilter(files);
-    console.log(cssFiles);
     for (let i = 0; i < cssFiles.length; i++) {
         //create stream and write it to new bundle.css
         const filePath = path.join(inputFolderPath, cssFiles[i].name);
