@@ -15,13 +15,10 @@ const addToFile = async (input = '', fileName = txtFile) => {
     }
 };
 addToFile();
+console.log('Hello, write text please \n')
 
-
-rl.question('Hello, write text please \n', async (answer) => {
-    await addToFile(answer);
-});
 rl.on('line', async (input) => {
-    if (input === 'exit') rl.close();
+    if (input.trim() === 'exit') rl.close();
     else await addToFile(input);
 });
 rl.on('close', () => {
