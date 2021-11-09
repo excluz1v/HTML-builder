@@ -15,7 +15,7 @@ const addToFile = async (input = '', fileName = txtFile) => {
     }
 };
 addToFile();
-console.log('Hello, write text please \n')
+console.log('Hello, write text please')
 
 rl.on('line', async (input) => {
     if (input.trim() === 'exit') rl.close();
